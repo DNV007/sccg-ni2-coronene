@@ -1,0 +1,22 @@
+{
+  "upload_type": "dataset",
+  "title": "Spin-Control Connectivity Graph analysis: Ni2/coronene retained-state benchmark",
+  "version": "1.0.0",
+  "language": "eng",
+  "description": "Analysis code, parsed electronic-structure manifolds, compact matrix-reconstruction inputs, descriptor sweeps, sensitivity records, and figures for a fixed-geometry Ni2/coronene retained-state benchmark. The release documents state-set sensitivity in one computational construction; it does not establish retained-state convergence, molecular-candidate ranking performance, or predictive control fidelity. Numerical data and figures are licensed under CC BY 4.0. Analysis code is licensed separately under MIT; see LICENSES and the README for scope.",
+  "creators": [
+    {"name": "Liu, Jing", "affiliation": "Ulm University"},
+    {"name": "Sarkar, Kanchan", "affiliation": "Ulm University"},
+    {"name": "Groß, Axel", "affiliation": "Ulm University"}
+  ],
+  "keywords": [
+    "spin-orbit coupling",
+    "computational chemistry",
+    "state interaction",
+    "molecular spin control",
+    "reproducibility"
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "related_identifiers": []
+}
