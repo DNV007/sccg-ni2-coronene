@@ -1,7 +1,7 @@
 # Spin-Control Connectivity Graph: Ni₂/coronene benchmark
 
-Data and analysis code supporting **Retained States Can Reverse Spin-Control
-Descriptor Comparisons**, by Jing Liu, Kanchan Sarkar, and Axel Groß.
+Data and analysis code supporting **Retained-State Selection Can Reverse
+Spin-Control Descriptor Correlations**, by Jing Liu, Kanchan Sarkar, and Axel Groß.
 
 This repository distributes the version 1.0.0 reproducibility archive for a
 fixed-geometry Ni₂/coronene computational benchmark. It documents retained-state
