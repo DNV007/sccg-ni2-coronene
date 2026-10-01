@@ -1,9 +1,9 @@
 {
   "upload_type": "dataset",
-  "title": "Spin-Control Connectivity Graph analysis: Ni2/coronene retained-state benchmark",
-  "version": "1.0.0",
+  "title": "Unnormalized Endpoint Supports: Ni2/coronene Spin-Control Connectivity Graph benchmark",
+  "version": "2.0.0",
   "language": "eng",
-  "description": "Analysis code, parsed electronic-structure manifolds, compact matrix-reconstruction inputs, descriptor sweeps, sensitivity records, and figures for a fixed-geometry Ni2/coronene retained-state benchmark. The release documents state-set sensitivity in one computational construction; it does not establish retained-state convergence, molecular-candidate ranking performance, or predictive control fidelity. Numerical data and figures are licensed under CC BY 4.0. Analysis code is licensed separately under MIT; see LICENSES and the README for scope.",
+  "description": "Version 2.0.0 of the Ni2/coronene Spin-Control Connectivity Graph benchmark archive. Adds full-grid endpoint-support accounting for G = D2 S_L S_R, permanent-dipole-difference sensitivity records, updated figures, and a fixed-orbital ten-root CAS(26,15) CI screen with inputs, starting orbitals, logs, and HDF5 outputs. The screen places at least seven additional roots below 0.65 eV at the CI level; higher-root MS-CASPT2 energies and an enlarged spin-orbit graph remain uncomputed. The archive documents state-set sensitivity in one fixed-geometry computational construction and does not establish retained-state convergence, molecular-candidate ranking performance, or predictive control fidelity. Numerical data and figures are licensed under CC BY 4.0. Analysis code is licensed separately under MIT; see LICENSES and README.",
   "creators": [
     {"name": "Liu, Jing", "affiliation": "Ulm University"},
     {"name": "Sarkar, Kanchan", "affiliation": "Ulm University"},
@@ -18,5 +18,7 @@
   ],
   "access_right": "open",
   "license": "cc-by-4.0",
-  "related_identifiers": []
+  "related_identifiers": [
+    {"identifier": "10.5281/zenodo.23047692", "relation": "isNewVersionOf", "scheme": "doi"}
+  ]
 }

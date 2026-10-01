@@ -1,0 +1,67 @@
+* B1 -- Ni2 on coronene
+* Fixed-orbital CASCI model-space anchor in CAS(12,12).
+* Read the corresponding multiplicity's production CAS(26,15) natural
+* orbitals and solve CI without orbital optimization. inactive=100 and
+* ras2=12 select slots 101-112. Relative to production slots 94-108,
+* seven orbitals are frozen, eight retained and four virtuals promoted.
+* The spaces are not nested; no individual-orbital causal attribution is made.
+* Spin-free CI is exact within this chosen space; RASSI retains five roots
+* per multiplicity and uses the stated spin-orbit approximation.
+* EMIL >COPY stages each multiplicity's JobIph for RASSI-SO.
+
+&GATEWAY
+ coord = opt_optimized.xyz
+ basis = Def2-TZVP
+ group = nosym
+ amfi
+ RICD
+
+&SEWARD
+
+* --- Quintet manifold (S=2, spin=5) ---
+&RASSCF
+ fileorb = rasscf.RasOrb
+ cionly
+ charge = 0; spin = 5
+ nactel = 12 0 0
+ inactive = 100
+ ras2 = 12
+ ciroot = 5 5 1
+ thrs = 1.0d-7 1.0d-5 1.0d-5
+ outorbital = canonical
+>COPY $Project.JobIph JOB001
+
+* --- Triplet manifold (S=1, spin=3) ---
+&RASSCF
+ fileorb = rasscf_T.RasOrb
+ cionly
+ charge = 0; spin = 3
+ nactel = 12 0 0
+ inactive = 100
+ ras2 = 12
+ ciroot = 5 5 1
+ thrs = 1.0d-7 1.0d-5 1.0d-5
+ outorbital = canonical
+>COPY $Project.JobIph JOB002
+
+* --- Singlet manifold (S=0, spin=1) ---
+&RASSCF
+ fileorb = rasscf_S.RasOrb
+ cionly
+ charge = 0; spin = 1
+ nactel = 12 0 0
+ inactive = 100
+ ras2 = 12
+ ciroot = 5 5 1
+ thrs = 1.0d-7 1.0d-5 1.0d-5
+ outorbital = canonical
+>COPY $Project.JobIph JOB003
+
+&RASSI
+ NrOfJobIphs = 3 5 5 5
+   1 2 3 4 5
+   1 2 3 4 5
+   1 2 3 4 5
+ SPINorbit
+ SOCOupling = 10
+ Meso

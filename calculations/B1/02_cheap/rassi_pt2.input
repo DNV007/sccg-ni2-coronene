@@ -1,0 +1,30 @@
+* B1 -- Ni2 on coronene
+* OpenMolcas: RASSI-SO with MS-CASPT2 energies (EJOB)
+*
+* Reads the three JobMix files produced by MS-CASPT2 (one per spin manifold,
+* Q/T/S, each containing 5 MS-CASPT2 roots), staged via EMIL >COPY as
+* JOB001/JOB002/JOB003.  RASSI builds the 45x45 SO Hamiltonian using
+* CASPT2 (not raw CASSCF) diagonal energies via the EJOB keyword.
+
+&GATEWAY
+ coord = opt_optimized.xyz
+ basis = Def2-TZVP
+ group = nosym
+ amfi
+ RICD
+
+&SEWARD
+
+>COPY ../caspt2_Q.JobMix JOB001
+>COPY ../caspt2_T.JobMix JOB002
+>COPY ../caspt2_S.JobMix JOB003
+
+&RASSI
+ NrOfJobIphs = 3 5 5 5
+   1 2 3 4 5
+   1 2 3 4 5
+   1 2 3 4 5
+ EJOB
+ SPINorbit
+ SOCOupling = 10
+ Meso

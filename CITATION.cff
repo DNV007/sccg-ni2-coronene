@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 type: dataset
 message: "If you use these data or analysis tools, please cite this release."
-title: "Spin-Control Connectivity Graph analysis: Ni2/coronene retained-state benchmark"
-version: 1.0.0
+title: "Unnormalized Endpoint Supports: Ni2/coronene Spin-Control Connectivity Graph benchmark"
+version: 2.0.0
 authors:
   - family-names: Liu
     given-names: Jing

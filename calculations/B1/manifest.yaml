@@ -1,0 +1,83 @@
+# Analysis manifest for the Ni2/coronene SCCG benchmark.
+
+system:
+  tag: B1
+  description: "Ni2 on coronene C24H12; fixed-geometry calibration benchmark"
+  n_atoms: 38
+  composition: {C: 24, H: 12, Ni: 2}
+  electrons: 212
+  charge: 0
+
+geometry:
+  status: complete
+  optimized_xyz: "calculations/B1/01_cluster/opt_optimized.xyz"
+  software: "Gaussian 16 C.01"
+  method: "PBE-D3(BJ)/def2-TZVP"
+  stationary_point: true
+  Ni_Ni_distance_A: 4.88
+  Ni_height_A: 1.87
+
+production_tier:
+  status: complete
+  software: "OpenMolcas 24.02"
+  method: "SA-CASSCF/MS-CASPT2/RASSI-SO"
+  active_space: "CAS(26,15)"
+  roots_per_multiplicity: 5
+  multiplicities: [5, 3, 1]
+  n_so_states: 45
+  manifold_json: "calculations/B1/02_cheap/manifold_cheap.json"
+  descriptor_json: "calculations/B1/02_cheap/descriptors_cheap_dipole_only.json"
+
+bridge_tier:
+  status: complete
+  software: "OpenMolcas 24.02"
+  method: "MS-CASPT2/RASSI-SO on fixed compact-space orbitals"
+  active_space: "CAS(12,12)"
+  roots_per_multiplicity: 5
+  n_so_states: 45
+  manifold_json: "calculations/B1/03c_caspt2_compact/manifold_caspt2_compact.json"
+  descriptor_json: "calculations/B1/03c_caspt2_compact/descriptors_caspt2_compact_dipole_only.json"
+
+model_space_anchor:
+  status: complete
+  software: "OpenMolcas 24.02"
+  method: "CASCI/RASSI-SO on fixed compact-space orbitals"
+  active_space: "CAS(12,12)"
+  roots_per_multiplicity: 5
+  n_so_states: 45
+  manifold_json: "calculations/B1/03b_exact/manifold_exact.json"
+  descriptor_json: "calculations/B1/03b_exact/descriptors_exact_dipole_only.json"
+  scope: "exact only within the chosen compact CI space and finite root set"
+
+projectors:
+  coefficient_layout: "C[so_state, spin_free_basis]"
+  schema: "openmolcas_rows_are_so_states_v2"
+  validation:
+    - "C @ H_SO @ C.conj().T reproduces SO energies"
+    - "root compositions reproduce the RASSI printed table"
+    - "whole-multiplet traces recover 2S+1"
+
+analyses:
+  tier_correlations: "calculations/B1/tier_correlations.json"
+  endpoint_sensitivity: "calculations/B1/endpoint_sensitivity.json"
+  root_boundary_stress: "calculations/B1/root_truncation_sensitivity.json"
+  mechanistic_sensitivity: "calculations/B1/mechanistic_sensitivity.json"
+  d4_threshold_sensitivity: "calculations/B1/d4_threshold_sensitivity.json"
+  d5_cutoff_sensitivity: "calculations/B1/d5_cutoff_sensitivity.json"
+  raw_sweeps: "calculations/B1/descriptor_sweeps.csv"
+  reconstruction_inputs: "calculations/B1/reconstruction_inputs/*.npz"
+  support_accounting: "calculations/B1/support_accounting_record.json"
+  support_curves: "calculations/B1/support_accounting_curves.csv"
+  permanent_dipole_differences: "calculations/B1/permanent_dipole_difference_screen.json"
+  ci_root_screen: "calculations/B1/ci_root_screen_result.json"
+  ci_calculation_records: "calculations/B1/06_referee_studies/ci_root_screen_10/"
+
+scope:
+  root_test: "downward 3/4/5-root deletion stress test; not convergence with higher roots"
+  multistate_path: "MS-CASPT2 only; full production XMS tier unavailable"
+  chemical_domain: "single benchmark; cross-system transfer not established"
+
+environment:
+  python: "uv-managed"
+  lockfile: "uv.lock"
+  package: "analysis/sccg"

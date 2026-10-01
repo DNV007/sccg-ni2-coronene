@@ -1,0 +1,30 @@
+* B1 -- Ni2 on coronene | CASPT2 multistate-scheme sensitivity
+* RASSI-SO over the three XMS-CASPT2 compact-CAS(12,12) JobMix files.
+* Line-for-line the 03c_caspt2_compact/rassi_caspt2.input, but reading the XMS
+* JobMix (caspt2xms_{Q,T,S}.JobMix). Run AFTER the three caspt2xms_* jobs.
+* Produces rassi_xms.rassi.h5 (45 SO states) -> feed the SAME analysis pipeline
+* (parse_rassi -> descriptors -> correlate_tiers) and compare to the MS 03c
+* manifold to quantify XMS-vs-MS descriptor stability.
+
+&GATEWAY
+ coord = opt_optimized.xyz
+ basis = Def2-TZVP
+ group = nosym
+ amfi
+ RICD
+
+&SEWARD
+
+>COPY ../caspt2xms_Q.JobMix JOB001
+>COPY ../caspt2xms_T.JobMix JOB002
+>COPY ../caspt2xms_S.JobMix JOB003
+
+&RASSI
+ NrOfJobIphs = 3 5 5 5
+   1 2 3 4 5
+   1 2 3 4 5
+   1 2 3 4 5
+ EJOB
+ SPINorbit
+ SOCOupling = 10
+ Meso

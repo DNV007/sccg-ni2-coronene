@@ -1,0 +1,25 @@
+* B1 -- Ni2 on coronene
+* OpenMolcas: MS-CASPT2 on the TRIPLET (S = 1) manifold
+
+&GATEWAY
+ coord = opt_optimized.xyz
+ basis = Def2-TZVP
+ group = nosym
+ amfi
+ RICD
+
+&SEWARD
+
+&RASSCF
+ fileorb = rasscf_T.RasOrb
+ cionly
+ charge = 0; spin = 3
+ nactel = 26 0 0; inactive = 93; ras2 = 15
+ ciroot = 5 5 1
+ thrs = 1.0d-5 1.0d-3 1.0d-3
+ outorbital = canonical
+
+&CASPT2
+ multistate = 5 1 2 3 4 5
+ imag = 0.2
+ ipeashift = 0.25

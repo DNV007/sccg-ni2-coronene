@@ -1,0 +1,112 @@
+{
+  "source_file": "production quintet rasscf.rasscf.h5",
+  "source_sha256": "4f715169c6da1ecb9e5b71bf6459309da93999cb6b1907c1f5ec5ad7f64a5de3",
+  "dataset": "MO_OCCUPATIONS",
+  "density": "equally weighted state-averaged quintet density, five roots",
+  "indexing": "one-based orbital-file slots, not initial SCF orbital-character assignments",
+  "production_active_slots": [
+    94,
+    108
+  ],
+  "compact_active_slots": [
+    101,
+    112
+  ],
+  "slots": [
+    {
+      "slot": 94,
+      "occupation": 1.999943408582305,
+      "compact_role": "frozen"
+    },
+    {
+      "slot": 95,
+      "occupation": 1.598309525468257,
+      "compact_role": "frozen"
+    },
+    {
+      "slot": 96,
+      "occupation": 1.9999951817512556,
+      "compact_role": "frozen"
+    },
+    {
+      "slot": 97,
+      "occupation": 1.9998907314006122,
+      "compact_role": "frozen"
+    },
+    {
+      "slot": 98,
+      "occupation": 1.7999549140183042,
+      "compact_role": "frozen"
+    },
+    {
+      "slot": 99,
+      "occupation": 1.9999838165072419,
+      "compact_role": "frozen"
+    },
+    {
+      "slot": 100,
+      "occupation": 1.6000455569934315,
+      "compact_role": "frozen"
+    },
+    {
+      "slot": 101,
+      "occupation": 1.6017317555385913,
+      "compact_role": "shared"
+    },
+    {
+      "slot": 102,
+      "occupation": 1.400035806302266,
+      "compact_role": "shared"
+    },
+    {
+      "slot": 103,
+      "occupation": 1.9999690763545688,
+      "compact_role": "shared"
+    },
+    {
+      "slot": 104,
+      "occupation": 1.9999625256112465,
+      "compact_role": "shared"
+    },
+    {
+      "slot": 105,
+      "occupation": 1.9999217849877722,
+      "compact_role": "shared"
+    },
+    {
+      "slot": 106,
+      "occupation": 1.999950623530323,
+      "compact_role": "shared"
+    },
+    {
+      "slot": 107,
+      "occupation": 1.000182067146743,
+      "compact_role": "shared"
+    },
+    {
+      "slot": 108,
+      "occupation": 1.0001232258070936,
+      "compact_role": "shared"
+    },
+    {
+      "slot": 109,
+      "occupation": 0.0,
+      "compact_role": "promoted_virtual"
+    },
+    {
+      "slot": 110,
+      "occupation": 0.0,
+      "compact_role": "promoted_virtual"
+    },
+    {
+      "slot": 111,
+      "occupation": 0.0,
+      "compact_role": "promoted_virtual"
+    },
+    {
+      "slot": 112,
+      "occupation": 0.0,
+      "compact_role": "promoted_virtual"
+    }
+  ]
+}

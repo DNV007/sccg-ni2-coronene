@@ -1,0 +1,35 @@
+* B1 -- Ni2 on coronene | CASPT2 multistate-scheme sensitivity
+* XMS-CASPT2 on the COMPACT CAS(12,12), QUINTET (S=2) manifold.
+*
+* Identical to 03c_caspt2_compact/caspt2_Q.input EXCEPT multistate -> xmulti
+* (extended-multistate). Same active space, same cheap-tier natural orbitals
+* (rasscf.RasOrb), same imag/IPEA shifts. Purpose: test whether the MS-CASPT2
+* descriptor ordering (D2/D5 sweeps, SO spectrum) is stable to the XMS
+* resolution of near-degenerate root mixing -- the reliability check the low
+* reference weights (~0.39) call for. Compare the resulting RASSI-SO manifold
+* against 03c_caspt2_compact (MS) with the same analysis pipeline.
+
+&GATEWAY
+ coord = opt_optimized.xyz
+ basis = Def2-TZVP
+ group = nosym
+ amfi
+ RICD
+
+&SEWARD
+
+&RASSCF
+ fileorb = rasscf.RasOrb
+ cionly
+ charge = 0; spin = 5
+ nactel = 12 0 0
+ inactive = 100
+ ras2 = 12
+ ciroot = 5 5 1
+ thrs = 1.0d-7 1.0d-5 1.0d-5
+ outorbital = canonical
+
+&CASPT2
+ xmulti = 5 1 2 3 4 5
+ imag = 0.2
+ ipeashift = 0.25

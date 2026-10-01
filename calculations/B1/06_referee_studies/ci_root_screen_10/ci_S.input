@@ -1,0 +1,19 @@
+* Fixed-orbital production-space CI screen: ten singlet roots.
+* No orbital optimization and no CASPT2; same geometry, basis, and active space.
+
+&GATEWAY
+ coord = opt_optimized.xyz
+ basis = Def2-TZVP
+ group = nosym
+ amfi
+ RICD
+
+&SEWARD
+
+&RASSCF
+ fileorb = rasscf_S.RasOrb
+ cionly
+ charge = 0; spin = 1
+ nactel = 26 0 0; inactive = 93; ras2 = 15
+ ciroot = 10 10 1
+ thrs = 1.0d-5 1.0d-3 1.0d-3

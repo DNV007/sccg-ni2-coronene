@@ -1,0 +1,39 @@
+* B1 -- Ni2 on coronene
+* OpenMolcas: SA-CASSCF on the HS quintet manifold
+*
+* Active space CAS(26, 15) -- contiguous MOs 94..108 from RHF starting orbitals:
+*   - 10 Ni 3d-character MOs (94, 95, 97, 98, 99, 100, 101, 102, 103, 105)
+*   - 2 pure coronene-pi mediator MOs (96, 104)
+*   - 1 mixed HOMO (106; 47% Ni / 53% C)
+*   - 1 coronene-pi* virtual mediator (107)
+*   - 1 Ni-character virtual at +1.5 eV (108; sigma*/back-donation channel)
+*
+* For 26 active electrons and S=2, at least 15 active orbitals are
+* required: eleven doubly occupied plus four singly occupied orbitals.
+*
+* SA-CASSCF over the 5 lowest quintet (S = 2) roots, equal weight.
+* Triplet and singlet manifolds run in separate jobs and
+* are combined via RASSI-SO.
+
+&GATEWAY
+ coord = opt_optimized.xyz
+ basis = Def2-TZVP
+ group = nosym
+ amfi
+ RICD
+
+&SEWARD
+
+&RASSCF
+ fileorb = scf.ScfOrb
+ charge = 0
+ spin = 5
+ nactel = 26 0 0
+ inactive = 93
+ ras2 = 15
+ ciroot = 5 5 1
+* Convergence thresholds: 1e-6 Eh for energy and 1e-4 for orbital/density
+* criteria. Descriptor trends are assessed across the retained-state tests.
+ thrs = 1.0d-6 1.0d-4 1.0d-4
+ iterations = 80 50
+ outorbital = canonical

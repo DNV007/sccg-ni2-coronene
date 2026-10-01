@@ -1,0 +1,32 @@
+* B1 -- Ni2 on coronene
+* OpenMolcas: RASSI-SO with compact-CAS(12,12) MS-CASPT2 energies.
+*
+* Reads the three JobMix files produced by caspt2_{Q,T,S}.input (one per spin
+* manifold, each 5 MS-CASPT2 roots), staged as JOB001/JOB002/JOB003. RASSI
+* builds the 45x45 SO Hamiltonian on the CASPT2 diagonal energies (EJOB),
+* following the production protocol (02_cheap/rassi_pt2.input). The
+* comparisons to production CAS(26,15) and compact CASCI are conditional
+* pathwise sensitivities, not an interaction-free error decomposition.
+
+&GATEWAY
+ coord = opt_optimized.xyz
+ basis = Def2-TZVP
+ group = nosym
+ amfi
+ RICD
+
+&SEWARD
+
+>COPY ../caspt2_Q.JobMix JOB001
+>COPY ../caspt2_T.JobMix JOB002
+>COPY ../caspt2_S.JobMix JOB003
+
+&RASSI
+ NrOfJobIphs = 3 5 5 5
+   1 2 3 4 5
+   1 2 3 4 5
+   1 2 3 4 5
+ EJOB
+ SPINorbit
+ SOCOupling = 10
+ Meso

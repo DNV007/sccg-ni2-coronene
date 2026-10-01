@@ -1,0 +1,25 @@
+{
+  "descriptor_invariance": {
+    "cheap": {
+      "n_states": 45,
+      "n_near_deg_clusters": 4,
+      "n_states_in_clusters": 44,
+      "max_abs_deviation_D2_D5": 6.661338147750939e-16
+    },
+    "reference": {
+      "n_states": 45,
+      "n_near_deg_clusters": 9,
+      "n_states_in_clusters": 42,
+      "max_abs_deviation_D2_D5": 5.551115123125783e-16
+    }
+  },
+  "spinfree_rho_stability": {
+    "rho_baseline": 0.8393,
+    "rho_min": 0.8179,
+    "rho_max": 0.8393,
+    "n_relabelings": 32,
+    "n_near_deg_states_cheap": 8,
+    "n_near_deg_states_reference": 2,
+    "threshold_eV": 0.05
+  }
+}

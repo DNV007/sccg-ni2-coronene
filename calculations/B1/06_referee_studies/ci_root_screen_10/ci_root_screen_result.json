@@ -1,0 +1,285 @@
+{
+  "scope": "Fixed-orbital production CAS(26,15) CI-only screen; no orbital reoptimization or CASPT2.",
+  "criteria": "calculations/B1/06_referee_studies/ci_root_screen_10/SCREEN_CRITERIA_2026-09-30.md",
+  "files": {
+    "Q": {
+      "path": "ci_Q.rasscf.h5",
+      "sha256": "743ed3fd59c70aba280b37b91cd37bd71fc6c1628f878377a650e845ac6edcf0"
+    },
+    "T": {
+      "path": "ci_T.rasscf.h5",
+      "sha256": "0f8ae3edc71cca9db95f87ef680344427c7446dd56a6a4cb020745bdb88808c1"
+    },
+    "S": {
+      "path": "ci_S.rasscf.h5",
+      "sha256": "353162ca561d67ef1bcb60dd8e42e2d08aff355a3c6b7142b06152cac0e38838"
+    }
+  },
+  "lowest_CI_energy_hartree": -3929.7002141498956,
+  "classification": "additional_CI_roots_inside_0p65_eV",
+  "additional_roots_below_0p65_eV": [
+    {
+      "multiplicity": "quintet",
+      "root": 6,
+      "energy_hartree": -3929.677148987429,
+      "relative_energy_eV": 0.6276350447034037,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "triplet",
+      "root": 6,
+      "energy_hartree": -3929.6791542159217,
+      "relative_energy_eV": 0.5730699976788505,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "triplet",
+      "root": 7,
+      "energy_hartree": -3929.6779255650827,
+      "relative_energy_eV": 0.606503290221395,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "triplet",
+      "root": 8,
+      "energy_hartree": -3929.6779170608106,
+      "relative_energy_eV": 0.606734703252771,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "triplet",
+      "root": 9,
+      "energy_hartree": -3929.6774024550155,
+      "relative_energy_eV": 0.6207378403093101,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "triplet",
+      "root": 10,
+      "energy_hartree": -3929.677357403047,
+      "relative_energy_eV": 0.6219637668198622,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "singlet",
+      "root": 6,
+      "energy_hartree": -3929.677536767764,
+      "relative_energy_eV": 0.6170830042255407,
+      "retained_in_five_root_rule": false
+    }
+  ],
+  "additional_roots_interleaved_below_retained_other_multiplicity": [],
+  "roots": [
+    {
+      "multiplicity": "triplet",
+      "root": 1,
+      "energy_hartree": -3929.7002141498956,
+      "relative_energy_eV": 0.0,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "singlet",
+      "root": 1,
+      "energy_hartree": -3929.6979865301932,
+      "relative_energy_eV": 0.06061662012989942,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "quintet",
+      "root": 1,
+      "energy_hartree": -3929.697702513192,
+      "relative_energy_eV": 0.0683451164547942,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "singlet",
+      "root": 2,
+      "energy_hartree": -3929.69224784509,
+      "relative_energy_eV": 0.21677419701436773,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "quintet",
+      "root": 2,
+      "energy_hartree": -3929.691914085798,
+      "relative_energy_eV": 0.22585625002384307,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "singlet",
+      "root": 3,
+      "energy_hartree": -3929.6907990379236,
+      "relative_energy_eV": 0.2561982484186489,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "quintet",
+      "root": 3,
+      "energy_hartree": -3929.6905070222388,
+      "relative_energy_eV": 0.26414440000934664,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "triplet",
+      "root": 2,
+      "energy_hartree": -3929.689725630894,
+      "relative_energy_eV": 0.285407141703181,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "triplet",
+      "root": 3,
+      "energy_hartree": -3929.68969248674,
+      "relative_energy_eV": 0.2863090400741308,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "triplet",
+      "root": 4,
+      "energy_hartree": -3929.6885310217513,
+      "relative_energy_eV": 0.3179141124970367,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "triplet",
+      "root": 5,
+      "energy_hartree": -3929.6881647998766,
+      "relative_energy_eV": 0.32787951737928356,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "singlet",
+      "root": 4,
+      "energy_hartree": -3929.6850377154983,
+      "relative_energy_eV": 0.41297181822155615,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "singlet",
+      "root": 5,
+      "energy_hartree": -3929.684730471605,
+      "relative_energy_eV": 0.4213323504801369,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "quintet",
+      "root": 4,
+      "energy_hartree": -3929.6846326878645,
+      "relative_energy_eV": 0.42399318160682736,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "quintet",
+      "root": 5,
+      "energy_hartree": -3929.684375007862,
+      "relative_energy_eV": 0.4310050116828681,
+      "retained_in_five_root_rule": true
+    },
+    {
+      "multiplicity": "triplet",
+      "root": 6,
+      "energy_hartree": -3929.6791542159217,
+      "relative_energy_eV": 0.5730699976788505,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "triplet",
+      "root": 7,
+      "energy_hartree": -3929.6779255650827,
+      "relative_energy_eV": 0.606503290221395,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "triplet",
+      "root": 8,
+      "energy_hartree": -3929.6779170608106,
+      "relative_energy_eV": 0.606734703252771,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "singlet",
+      "root": 6,
+      "energy_hartree": -3929.677536767764,
+      "relative_energy_eV": 0.6170830042255407,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "triplet",
+      "root": 9,
+      "energy_hartree": -3929.6774024550155,
+      "relative_energy_eV": 0.6207378403093101,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "triplet",
+      "root": 10,
+      "energy_hartree": -3929.677357403047,
+      "relative_energy_eV": 0.6219637668198622,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "quintet",
+      "root": 6,
+      "energy_hartree": -3929.677148987429,
+      "relative_energy_eV": 0.6276350447034037,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "singlet",
+      "root": 7,
+      "energy_hartree": -3929.6709578477644,
+      "relative_energy_eV": 0.7961045374218463,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "singlet",
+      "root": 8,
+      "energy_hartree": -3929.6659385137928,
+      "relative_energy_eV": 0.9326875728215219,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "singlet",
+      "root": 9,
+      "energy_hartree": -3929.6644986545707,
+      "relative_energy_eV": 0.9718681382524613,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "singlet",
+      "root": 10,
+      "energy_hartree": -3929.6600501654466,
+      "relative_energy_eV": 1.0929176940198435,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "quintet",
+      "root": 7,
+      "energy_hartree": -3929.6543349331955,
+      "relative_energy_eV": 1.2484370862894378,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "quintet",
+      "root": 8,
+      "energy_hartree": -3929.6484875945544,
+      "relative_energy_eV": 1.4075512765651497,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "quintet",
+      "root": 9,
+      "energy_hartree": -3929.6409626589752,
+      "relative_energy_eV": 1.6123152050845693,
+      "retained_in_five_root_rule": false
+    },
+    {
+      "multiplicity": "quintet",
+      "root": 10,
+      "energy_hartree": -3929.6039221552664,
+      "relative_energy_eV": 2.6202386582505373,
+      "retained_in_five_root_rule": false
+    }
+  ],
+  "caution": "CI-only positions do not determine MS-CASPT2 positions or SOC state-count convergence."
+}

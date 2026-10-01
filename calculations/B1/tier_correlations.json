@@ -1,0 +1,259 @@
+{
+  "_resampling_note": "boot95_lo and boot95_hi are paired grid-point resampling percentiles, not validated confidence intervals for correlated deterministic sweeps. They are not used as uncertainty estimates in the associated study.",
+  "SO_45_energies": {
+    "spearman": 1.0,
+    "pearson": 0.9343182394085265,
+    "n": 45,
+    "both_energy_sorted": true,
+    "scale_ratio_exact_over_cheap": 3.014774191335987,
+    "_note": "spearman is trivial here (both spectra energy-sorted); pearson measures linear envelope correspondence only"
+  },
+  "D2_omega_sweep": {
+    "spearman": 0.07692307692307693,
+    "n": 14,
+    "boot95_lo": -0.6258876023030832,
+    "boot95_hi": 0.5919282511210763,
+    "cheap_range": [
+      0.006899985457887411,
+      0.020057786689645352
+    ],
+    "exact_range": [
+      0.009436055681417189,
+      0.058628570463963976
+    ],
+    "peak_omega_cheap": 0.02,
+    "peak_omega_exact": 0.65,
+    "top3_window_overlap": 0,
+    "top3_n": 3
+  },
+  "D3_omega_sweep": {
+    "spearman": -0.7582417582417582,
+    "n": 14,
+    "boot95_lo": -0.8980044345898004,
+    "boot95_hi": -0.4080717488789238,
+    "cheap_range": [
+      0.026534282967397283,
+      0.21514760581365808
+    ],
+    "exact_range": [
+      0.07462283475593894,
+      0.9791905925502916
+    ],
+    "peak_omega_cheap": 0.05,
+    "peak_omega_exact": 0.4,
+    "top3_window_overlap": 0,
+    "top3_n": 3
+  },
+  "D4_omega_sweep": {
+    "spearman": 0.5384615384615384,
+    "n": 14,
+    "boot95_lo": 0.11617057842499186,
+    "boot95_hi": 0.7683741648106904,
+    "cheap_range": [
+      0.9999772246854168,
+      0.999999778335641
+    ],
+    "exact_range": [
+      0.5371031189378346,
+      0.9999415950142566
+    ],
+    "peak_omega_cheap": 0.65,
+    "peak_omega_exact": 0.05,
+    "top3_window_overlap": 1,
+    "top3_n": 3
+  },
+  "D5_omega_sweep": {
+    "spearman": 0.01978021978021978,
+    "n": 14,
+    "boot95_lo": -0.5775343320848939,
+    "boot95_hi": 0.5610859728506787,
+    "cheap_range": [
+      0.16864804550259666,
+      0.6133116664467286
+    ],
+    "exact_range": [
+      0.016221273358116052,
+      0.35074183074664067
+    ],
+    "peak_omega_cheap": 0.25,
+    "peak_omega_exact": 0.3,
+    "top3_window_overlap": 1,
+    "top3_n": 3
+  },
+  "D1_value": {
+    "cheap": 0.00010008435885353567,
+    "exact": 0.00010496363348509555
+  },
+  "SF_15_cheap_vs_exact": {
+    "spearman": 0.8392857142857143,
+    "n": 15
+  },
+  "SF_15_cheap_vs_TDDFT": {
+    "spearman": 0.35714285714285715,
+    "n": 15
+  },
+  "active_space_decomposition": {
+    "SO_45_method_compactCASPT2_vs_exactCASCI": {
+      "pearson": 0.9322207508105943,
+      "n": 45,
+      "_held_fixed": "active space CAS(12,12)"
+    },
+    "SO_45_activespace_compactCASPT2_vs_cheapCASPT2": {
+      "pearson": 0.914702921414773,
+      "n": 45,
+      "_held_fixed": "method MS-CASPT2"
+    },
+    "D2_method_vs_exactCASCI": {
+      "spearman": 0.10329670329670329,
+      "n": 14,
+      "boot95_lo": -0.5919490493679362,
+      "boot95_hi": 0.6224761500953992,
+      "compact_range": [
+        0.0006165282047666819,
+        0.02916569186891753
+      ],
+      "other_range": [
+        0.009436055681417189,
+        0.058628570463963976
+      ],
+      "peak_omega_cheap": 0.02,
+      "peak_omega_exact": 0.65,
+      "top3_window_overlap": 0,
+      "top3_n": 3
+    },
+    "D2_activespace_vs_cheapCASPT2": {
+      "spearman": 0.9912087912087912,
+      "n": 14,
+      "boot95_lo": 0.9285714285714286,
+      "boot95_hi": 1.0,
+      "compact_range": [
+        0.0006165282047666819,
+        0.02916569186891753
+      ],
+      "other_range": [
+        0.006899985457887411,
+        0.020057786689645352
+      ],
+      "peak_omega_cheap": 0.02,
+      "peak_omega_exact": 0.02,
+      "top3_window_overlap": 3,
+      "top3_n": 3
+    },
+    "D3_method_vs_exactCASCI": {
+      "spearman": 0.22197802197802197,
+      "n": 14,
+      "boot95_lo": -0.3106614267328553,
+      "boot95_hi": 0.7244597191426446,
+      "compact_range": [
+        0.38828365591717184,
+        0.9923082491204062
+      ],
+      "other_range": [
+        0.07462283475593894,
+        0.9791905925502916
+      ],
+      "peak_omega_cheap": 0.25,
+      "peak_omega_exact": 0.4,
+      "top3_window_overlap": 0,
+      "top3_n": 3
+    },
+    "D3_activespace_vs_cheapCASPT2": {
+      "spearman": -0.24395604395604395,
+      "n": 14,
+      "boot95_lo": -0.7015590200445434,
+      "boot95_hi": 0.3836084225454955,
+      "compact_range": [
+        0.38828365591717184,
+        0.9923082491204062
+      ],
+      "other_range": [
+        0.026534282967397283,
+        0.21514760581365808
+      ],
+      "peak_omega_cheap": 0.25,
+      "peak_omega_exact": 0.05,
+      "top3_window_overlap": 0,
+      "top3_n": 3
+    },
+    "D4_method_vs_exactCASCI": {
+      "spearman": 0.13406593406593406,
+      "n": 14,
+      "boot95_lo": -0.6,
+      "boot95_hi": 0.6995515695067265,
+      "compact_range": [
+        0.8470171968156596,
+        0.9995845552547977
+      ],
+      "other_range": [
+        0.5371031189378346,
+        0.9999415950142566
+      ],
+      "peak_omega_cheap": 0.02,
+      "peak_omega_exact": 0.05,
+      "top3_window_overlap": 2,
+      "top3_n": 3
+    },
+    "D4_activespace_vs_cheapCASPT2": {
+      "spearman": -0.1076923076923077,
+      "n": 14,
+      "boot95_lo": -0.7366071428571429,
+      "boot95_hi": 0.5837149624950648,
+      "compact_range": [
+        0.8470171968156596,
+        0.9995845552547977
+      ],
+      "other_range": [
+        0.9999772246854168,
+        0.999999778335641
+      ],
+      "peak_omega_cheap": 0.02,
+      "peak_omega_exact": 0.65,
+      "top3_window_overlap": 1,
+      "top3_n": 3
+    },
+    "D5_method_vs_exactCASCI": {
+      "spearman": -0.8945054945054945,
+      "n": 14,
+      "boot95_lo": -0.9820627802690582,
+      "boot95_hi": -0.6089714182157112,
+      "compact_range": [
+        0.108657516851488,
+        0.42021522731748057
+      ],
+      "other_range": [
+        0.016221273358116052,
+        0.35074183074664067
+      ],
+      "peak_omega_cheap": 0.6,
+      "peak_omega_exact": 0.3,
+      "top3_window_overlap": 0,
+      "top3_n": 3
+    },
+    "D5_activespace_vs_cheapCASPT2": {
+      "spearman": 0.27912087912087913,
+      "n": 14,
+      "boot95_lo": -0.38392857142857145,
+      "boot95_hi": 0.7471795808661964,
+      "compact_range": [
+        0.108657516851488,
+        0.42021522731748057
+      ],
+      "other_range": [
+        0.16864804550259666,
+        0.6133116664467286
+      ],
+      "peak_omega_cheap": 0.6,
+      "peak_omega_exact": 0.25,
+      "top3_window_overlap": 0,
+      "top3_n": 3
+    },
+    "SF_15_method_compactCASPT2_vs_exactCASCI": {
+      "spearman": 0.6607142857142857,
+      "n": 15
+    },
+    "SF_15_activespace_compactCASPT2_vs_cheapCASPT2": {
+      "spearman": 0.8214285714285714,
+      "n": 15
+    }
+  }
+}

@@ -1,0 +1,41 @@
+* B1 -- Ni2 on coronene
+* OpenMolcas: MS-CASPT2 on the QUINTET (S=2) manifold in the
+* COMPACT CAS(12,12) active space -- the same active space and the same
+* production natural orbitals (rasscf.RasOrb) used by the CASCI
+* anchor (03b_exact/cas_ci.input), with MS-CASPT2 treatment.
+*
+* Comparison to compact CASCI changes correlation treatment at fixed space.
+* Comparison to production changes the active-space definition at fixed
+* MS-CASPT2 protocol. These are conditional, pathwise sensitivities in a
+* three-corner design, not interaction-free method and active-space errors.
+*
+* CIONLY rebuild reads the converged CAS(26,15) natural orbitals and takes the
+* compact 12-orbital window (inactive=100, ras2=12 -> active orbitals 101-112),
+* identical to cas_ci.input; CASPT2 settings (imag, IPEA, multistate) are
+* identical to the production tier (02_cheap/caspt2_Q.input). The spaces
+* are non-nested and the large-space CASCI corner is not calculated.
+
+&GATEWAY
+ coord = opt_optimized.xyz
+ basis = Def2-TZVP
+ group = nosym
+ amfi
+ RICD
+
+&SEWARD
+
+&RASSCF
+ fileorb = rasscf.RasOrb
+ cionly
+ charge = 0; spin = 5
+ nactel = 12 0 0
+ inactive = 100
+ ras2 = 12
+ ciroot = 5 5 1
+ thrs = 1.0d-7 1.0d-5 1.0d-5
+ outorbital = canonical
+
+&CASPT2
+ multistate = 5 1 2 3 4 5
+ imag = 0.2
+ ipeashift = 0.25

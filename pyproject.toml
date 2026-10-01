@@ -1,0 +1,47 @@
+[project]
+name = "spin-project"
+version = "2.0.0"
+description = "Spin-Control Connectivity Graph analysis of the Ni2/coronene retained-state benchmark."
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    # Full calculation environment; includes dependencies beyond the graph audit.
+    "qutip>=4.7.5,<5",
+    "krotov>=1.2.1",
+    # Numerics — kept on numpy 1.x for QuTiP 4.x compatibility
+    "numpy>=1.25,<2",
+    "scipy>=1.11,<1.13",
+    # Graphs + descriptors
+    "networkx>=3.2",
+    # Geometry + cluster cutout
+    "ase>=3.22",
+    # Light QC for local sanity checks (not the production pipeline)
+    "pyscf>=2.6",
+    # Workflow
+    "snakemake>=8.10",
+    "pyyaml>=6.0",
+    "h5py>=3.10",
+    # Plotting
+    "matplotlib>=3.8",
+    "plotly>=5.20",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+    "mypy>=1.10",
+    "jupyterlab>=4.0",
+    "ipykernel>=6.29",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["analysis/sccg/tests"]
+addopts = "-q"
+pythonpath = ["analysis"]
